@@ -117,7 +117,7 @@ mrb_require_load_rb_str(mrb_state *mrb, mrb_value self)
 
   mrb_get_args(mrb, "S|S", &code, &path);
   if (!mrb_string_p(path)) {
-    path = mrb_str_new_cstr(mrb, "-");
+    path = mrb_str_new_lit(mrb, "-");
   }
   path_ptr = mrb_str_to_cstr(mrb, path);
 
